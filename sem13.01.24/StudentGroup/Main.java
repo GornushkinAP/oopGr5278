@@ -33,24 +33,24 @@ public class Main {
         // System.out.println(student3);
 
         //Создаем списки студентов для каждой группы
-        List<Student> list = new ArrayList<>();
-        list.add(student1);
-        list.add(student2);
-        list.add(student3);
-        list.add(student4);
+        List<Student> list2 = new ArrayList<>();
+        list2.add(student1);
+        list2.add(student2);
+        list2.add(student3);
+        list2.add(student4);
      
         List<Student> list1 = new ArrayList<>();
         list1.add(student7);
         list1.add(student8);
         list1.add(student9);
     
-        List<Student> list2 = new ArrayList<>();
-        list2.add(student13);
-        list2.add(student14);
-        list2.add(student15);
-        list2.add(student16);
-        list2.add(student17);
-        list2.add(student18);
+        List<Student> list = new ArrayList<>();
+        list.add(student13);
+        list.add(student14);
+        list.add(student15);
+        list.add(student16);
+        list.add(student17);
+        list.add(student18);
 
 
         // StudentGroup group = new StudentGroup(list, 1);
@@ -65,8 +65,8 @@ public class Main {
         // }
 
         //Создаем группы студентов
-        StudentGroup group1 = new StudentGroup(list, 34, "Экономисты" );
-        StudentGroup group2 = new StudentGroup(list1, 12, "Бухгалтеры" );
+        StudentGroup group1 = new StudentGroup(list, 786, "Экономисты" );
+        StudentGroup group2 = new StudentGroup(list1, 34, "Бухгалтеры" );
         StudentGroup group3 = new StudentGroup(list2, 343, "Программисты" );
 
         //Создаем список групп
@@ -88,7 +88,7 @@ public class Main {
         // Создаем поток студентов и выводим информацию о каждой группе и ее студентах
         StudentStream stream = new StudentStream(1, groups);
         for (StudentGroup group : stream) {
-                 System.out.println("Group: " + group.getGroupName());
+                System.out.println("Stream number = " + stream.getStreamId() + " Group name: " + group.getGroupName());
        System.out.println("Students:");
             for (Student student : group.getList()) {
                 System.out.println("- " + student.getName());
@@ -101,11 +101,6 @@ public class Main {
         for (StudentGroup group : stream) {
             System.out.println("Group: " + group.getGroupName() + ", Number of students: " + group.getList().size());
         }
-
-        // Выводим информацию о потоке и список групп со студентами в нем.
-        System.out.println("------------------------------------------------------");
-        System.out.println("StudentStream { " + "Groups = " + groups + ", Stream Id = " + stream + ", Groups Amount = " + groups.size() + " }" + "\n");
-        System.out.println("------------------------------------------------------");
 
     }
     }

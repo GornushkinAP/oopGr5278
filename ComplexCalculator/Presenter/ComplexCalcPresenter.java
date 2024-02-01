@@ -1,4 +1,5 @@
 package Presenter;
+
 import Model.ComplexCalcModel;
 import Model.Logger;
 import View.ComplexCalcView;
@@ -7,13 +8,11 @@ import View.ComplexCalcView;
 public class ComplexCalcPresenter implements iComplexCalcPresenter {
     private ComplexCalcModel model; // Модель для выполнения вычислений
     private ComplexCalcView view; // Представление для отображения результата
-    private Logger logger; // Логгер для записи логов
 
     // Конструктор класса, принимает модель и представление в качестве параметров
     public ComplexCalcPresenter(ComplexCalcModel model, ComplexCalcView view) {
         this.model = model;
         this.view = view;
-        this.logger = new Logger(); // Инициализация логгера
     }
 
     // Обработчик события нажатия на кнопку сложения

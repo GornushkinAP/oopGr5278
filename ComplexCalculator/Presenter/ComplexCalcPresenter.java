@@ -24,7 +24,7 @@ public class ComplexCalcPresenter implements iComplexCalcPresenter {
         // Отображение результата в представлении
         view.showResult(result.toString());
         // Запись операции сложения в лог
-        logger.log("Сложение: " + num1 + " + " + num2 + "i = " + result.toString());
+        Logger.log("Сложение: " + num1 + " + " + num2 + "i = " + result.toString());
     }
 
     // Обработчик события нажатия на кнопку умножения
@@ -33,7 +33,7 @@ public class ComplexCalcPresenter implements iComplexCalcPresenter {
         // Выполнение умножения с помощью модели
         ComplexNumber result = model.multiply(num1, num2);
         // Запись операции умножения в лог
-        logger.log("Умножение: " + num1 + " * " + num2 + "i = " + result.toString());
+        Logger.log("Умножение: " + num1 + " * " + num2 + "i = " + result.toString());
         // Отображение результата в представлении
         view.showResult(result.toString());
     }
@@ -44,7 +44,7 @@ public class ComplexCalcPresenter implements iComplexCalcPresenter {
         // Выполнение деления с помощью модели
         ComplexNumber result = model.divide(num1, num2);
         // Запись операции деления в лог
-        logger.log("Деление: " + num1 + " / " + num2 + "i = " + result.toString());
+        Logger.log("Деление: " + num1 + " / " + num2 + "i = " + result.toString());
         // Отображение результата в представлении
         view.showResult(result.toString());
     }
